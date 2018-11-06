@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>echart3 </title>
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+<div id="chart" style="width: 100%;height: 600px"></div>
+<script type="text/javascript">
+    var echart = echarts.init(document.getElementById('chart'));
+
+    var options = {
+        tooltip: {
+        },
+        "series": [
+            {
+                "name": "Shan Hai Chain",
+                "type": "graph",
+                //"showSymbol": true,
+                //"yAxisIndex": 0,
+                //"z": 2,
+                "itemStyle": {
+                    "normal": {
+                        "label": {
+                            "show": true
+                        },
+                    },
+                    "emphasis": {
+                    }
+                },
+                "lineStyle": {
+                    "normal": {
+                        "color": "rgba(182,0,255,0.5)",
+                        "width": "2",
+                        "type": "dotted",
+                        "curveness": 0.2,
+                        "opacity": 0.9
+                    }
+                },
+                "label": {
+                    "normal": {
+                        "show": true,
+                    }
+                },
+                "layout": "force",
+                "roam": true,
+                "edgeSymbolSize": [
+                    8,
+                    10
+                ],
+                "edgeSymbol": [
+                    "circle",
+                    "arrow"
+                ],
+                //"focusNodeAdjacency": false,
+                "force": {
+                   "repulsion": 300,
+                    "edgeLength": 50
+                },
+                "links": [
+                    {
+                        "source": "Tom",
+                        "target": "Jerry"
+                    },
+                    {
+                        "source": "Michael",
+                        "target": "Jerry"
+                    },
+                    {
+                        "source": "Jenny",
+                        "target": "Jerry"
+                    },
+                    {
+                        "source": "Jessie",
+                        "target": "Jerry"
+                    },
+                    {
+                        "source": "Joe",
+                        "target": "Michael"
+                    },
+                    {
+                        "source": "John",
+                        "target": "Michael"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "buyer"
+                    },
+                    {
+                        "name": "seller"
+                    },
+                    {
+                        "name": "broker"
+                    },
+                ],
+                "data": [
+                    {
+                        "name": "Jerry",
+                        "symbolSize": 50,
+                        "value": "Jerry",
+                        "category": 1,
+                        "draggable": true,
+                        "legendName": "seller",
+                        "nodeType": 0, 
+                        "label": "seller"
+                    },
+                    {
+                        "name": "Tom",
+                        "symbolSize": 40,
+                        "value": "Tom",
+                        "category": 0,
+                        "draggable": true,
+                        "legendName": "buyer",
+                        "nodeType": 0,
+                        "label": "buyer"
+                    },
+                    {
+                        "name": "Michael",
+                        "symbolSize": 45,
+                        "value": "Michael",
+                        "category": 2,
+                        "draggable": true,
+                        "legendName": "buyer",
+                        "nodeType": 0,
+                        "label": "buyer"
+                    },
+                    {
+                        "name": "Jenny",
+                        "symbolSize": 40,
+                        "value": "Jenny",
+                        "category": 0,
+                        "draggable": true,
+                        "legendName": "buyer",
+                        "nodeType": 0,
+                        "label": "buyer"
+                    },
+                    {
+                        "name": "Jessie",
+                        "symbolSize": 40,
+                        "value": "Jenny",
+                        "category": 0,
+                        "draggable": true,
+                        "legendName": "broker",
+                        "nodeType": 0,
+                        "label": "broker"
+                    },    
+                    {
+                        "name": "Joe",
+                        "symbolSize": 40,
+                        "value": "Joe",
+                        "category": 0,
+                        "draggable": true,
+                        "legendName": "buyer",
+                        "nodeType": 0,
+                        "label": "buyer"
+                    },  
+                    {
+                        "name": "John",
+                        "symbolSize": 40,
+                        "value": "Joe",
+                        "category": 0,
+                        "draggable": true,
+                        "legendName": "buyer",
+                        "nodeType": 0,
+                        "label": "buyer"
+                    },                      
+                ]
+            }
+        ],
+        "legend": {
+            "data": [
+                "buyer",
+                "seller",
+                "broker",
+            ]
+        },
+        "title": [
+            {
+                "left": "left",
+                "text": "Shan Hai Chain"
+            }
+        ]
+    };
+    
+    echart.setOption(options);
+</script>
+</body>
+</html>
